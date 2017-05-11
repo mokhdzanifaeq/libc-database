@@ -110,3 +110,16 @@ add_local() {
   check_id $id || return
   process_libc $libc $id $info
 }
+
+# ===== Debian ===== #
+
+get_current_debian() {
+  local version=$1
+  local arch=$2
+  local pkg=$3
+  local info=ubuntu-$version-$arch-$pkg
+  echo "Getting package location for debian-$version-$arch"
+  local url=`(wget http://packages.debian.org/$version/$arch/$pkg/download -O - 2>/dev/null \
+               | grep -oh 'http://[^"]*libc6[^"]*.deb') || die "Failed to get package version"`
+  get_ubuntu $url $info
+}

@@ -25,3 +25,16 @@ get_current_ubuntu zesty amd64 libc6-i386
 
 get_all_ubuntu archive-eglibc http://security.ubuntu.com/ubuntu/pool/main/e/eglibc/
 get_all_ubuntu archive-glibc http://security.ubuntu.com/ubuntu/pool/main/g/glibc/
+
+get_current_debian wheezy i386 libc6
+get_current_debian wheezy amd64 libc6
+get_current_debian wheezy amd64 libc6-i386
+get_current_debian jessie i386 libc6
+get_current_debian jessie amd64 libc6
+get_current_debian jessie amd64 libc6-i386
+get_current_debian stretch i386 libc6
+get_current_debian stretch amd64 libc6
+get_current_debian stretch amd64 libc6-i386
+get_current_debian sid i386 libc6
+get_current_debian sid amd64 libc6
+get_current_debian sid amd64 libc6-i386
